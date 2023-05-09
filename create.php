@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $phone = "";
             $address = "";
             $successMessage = "Client added successfully";
-            header("location: ./index.php");
+            header("location: ./crud.php");
             exit;
         }
     }
@@ -105,7 +105,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
              </div>
 
              <div class="col-sm-3 d-grid">
-                <a href="/index.php" class="btn btn-outline-primary" role="button">Cancel</a>
+                <a href="/crud.php" class="btn btn-outline-primary" role="button">Cancel</a>
              </div>
             </div>
         </form>

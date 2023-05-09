@@ -11,7 +11,7 @@ $successMessage = "";
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     //get method: show the data of the client
     if(!isset($_GET["id"])) {
-        header("location: ./index.php");
+        header("location: ./crud.php");
         exit;
     }
 
@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $row = $result->fetch_assoc();
 
     if(!$row) {
-        header("location:./index.php");
+        header("location:./crud.php");
         exit;
     }
 
@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             $errorMessage = "Invalid query: " . $connection->error;
         } else {
             $successMessage = "Client updated correctly";
-            header("location:./index.php");
+            header("location:./crud.php");
             exit;
         }
     }
@@ -125,7 +125,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
              </div>
 
              <div class="col-sm-3 d-grid">
-                <a href="/index.php" class="btn btn-outline-primary" role="button">Cancel</a>
+                <a href="/crud.php" class="btn btn-outline-primary" role="button">Cancel</a>
              </div>
             </div>
         </form>

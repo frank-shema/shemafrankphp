@@ -9,6 +9,6 @@ if(isset($_GET["id"])){
         $message = "Error deleting record: " . $connection->error;
     }
 }
-header("location:./index.php?message=".urlencode($message));
+header("location:./crud.php?message=".urlencode($message));
 exit;
 ?>
